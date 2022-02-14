@@ -1,1 +1,29 @@
-<p>user works!</p>
+<app-search-form (searchResult)='searching($event)'></app-search-form>
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-img-top">
+            <img src="user.avatar_url" alt="">
+        </div>
+        <div class="card-body">
+            <span>{{ user.login_details}}</span><a href="{{user.html_url}}"><button class="btn-outline-success btn btn-sm"><i class="fa fa-github"></i>Github </button></a>
+        </div>
+
+        <div class="card-body">
+            <h4>Git-Search: {{user.login_details}}</h4>
+                <hr>
+                <p><i class="fa fa-file-o"></i>Repositories:<span class="follow">{{user.publicrepositories}}</span></p>
+                <hr>
+                <p> <i class="fa fa-user"></i>Following:<span class="follow">{{user.following}}</span></p>
+                <hr>
+                <p> <i class="fa fa-users"></i>Followers:<span class="follow">{{user.followers}}</span></p>
+                <hr>
+                <p><i class="fa fa-clock-o"></i>Created on: <span class="datejoined">{{user.dateCreated | datePipe}}</span></p>
+                <hr>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    
+</div>
