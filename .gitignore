@@ -41,3 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 apiUrl:'https://api.github.com/users/'
+private clientID!: 'Iv1.adffa77413217ae0';
+private clientSecret!:'627704f11b12ca5a8b8a6579747f5fd57bf1c6c5';
