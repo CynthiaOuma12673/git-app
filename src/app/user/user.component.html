@@ -1,17 +1,17 @@
-<!-- <app-search-form (searchResult)='searching($event)'></app-search-form> -->
+
 <div class="container">
         <div class="card">
-            <div class="card-img-top">
-            <img src="{{ gotUser.avatar_url}}" alt="">
+                <div class="card-img-top">
+                <img src="{{ gotUser.avatar_url}}" alt="">
         </div>
 
         <div class="card-body">
-            <h2>{{gotUser.name}}</h2>
-            <span>Click here to view my github page</span><a href="{{gotUser.html_url}}"><button class="btn-outline-success btn btn-sm"><i class="fa fa-github"></i>Github </button></a>
+                <h2>{{gotUser.name}}</h2>
+                <span>Click here to view my github page</span><a href="{{gotUser.html_url}}"><button class="btn-outline-success btn btn-sm"><i class="fa fa-github"></i>Github </button></a>
         </div>
 
         <div class="card-body">
-            <h4>Git-Search: {{gotUser.login}}</h4>
+                <h4>Git-Search: {{gotUser.login}}</h4>
                 <hr>
                 <p><i class="fa fa-file-o"></i>Repositories:<span class="follow">{{gotUser.public_repos}}</span></p>
                 <hr>
@@ -21,7 +21,7 @@
                 <hr>
                 <p><i class="fa fa-clock-o"></i>Created on: <span class="datecreated">{{gotUser.created_at}}</span></p>
                 <hr>
-            </div>
         </div>
-    </div>
+        </div>
+</div>
 
