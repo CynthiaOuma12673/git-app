@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../user';
 import { Repositories } from '../repositories';
-import { UserServiceService } from '../user-service.service';
-import { ReposerviceService } from '../reposervice.service';
+import { UserServiceService } from '../user-service.service'
 
 @Component({
   selector: 'app-search-form',

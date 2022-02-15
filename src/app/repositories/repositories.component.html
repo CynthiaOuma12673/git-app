@@ -1,28 +1,28 @@
 <div class="container">
     <div class="container ">
-          <div class="card" *ngFor="let repository of repos">
+          <div class="card" *ngFor="let repo of repo">
             <div class="card-body">
-                <h5 class="card-title">Repository Name:{{repositries.name}} </h5>
+                <h5 class="card-title">Repository Name:{{repo.name}} </h5>
         <div class="card-text">
                 <hr>
-        <div class="desc"><span class="top">Description:</span>{{repositries.description}} 
+        <div class="desc"><span class="top">Description:</span>{{repo.description}} 
                 </div>
                 <hr>
         <div class="card-subtitle">
-                    <span class="top">Language: </span> {{repositries.languages}}
+                    <span class="top">Language: </span> {{repo.languages}}
         </div>
-        <div class="card-subtitle"><span>Created On:</span>{{repositries.created_at}}</div>
+        <div class="card-subtitle"><span>Created On:</span>{{repo.created_at}}</div>
         </div>
         </div>
         <div class="card-footer">
         <div class="btn-group" role="group" aria-label="Third group">
-                <button class="btn btn-sm btn-info"><i class="fa fa-eye"></i> {{repositries.watching}}</button>
+                <button class="btn btn-sm btn-info"><i class="fa fa-eye"></i> {{repo.watching}}</button>
         </div>
         <div class="btn-group" role="group" aria-label="Third group">
-                <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork"></i> {{ repositries.fork}}</button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork"></i> {{ repo.fork}}</button>
         </div>
         <div class="btn-group" role="group" aria-label="Third group">
-                <button class="btn btn-sm btn-success" id="view"><a href="{{repositories.html_url}}" class="card-link">View <i class="fa fa-arrow-circle-right"></i></a> </button> 
+                <button class="btn btn-sm btn-success" id="view"><a href="{{repo.html_url}}" class="card-link">View <i class="fa fa-arrow-circle-right"></i></a> </button> 
         </div>
         </div>
         </div>
