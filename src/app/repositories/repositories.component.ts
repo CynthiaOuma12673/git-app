@@ -35,18 +35,7 @@ export class RepositoriesComponent implements OnInit {
       created_at:Date,
     }
   }
-
-    // searchRepositories(){
-    //   this.repoService.searchRepositories().then(
-    //     (result:any)=>{
-    //       this.repo=this.repoService.allRepos
-
-    //     },
-    //     (error:any)=>{
-    //       console.log(error);
-    //     }
-    //   );
-    // }
+    
   
   ngOnInit():void{
     this.repoService.searchRepositories()
