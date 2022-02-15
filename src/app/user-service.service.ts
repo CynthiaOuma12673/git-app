@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Repositories } from './repositories';
 import { HttpClient} from '@angular/common/http';
+import { ReposerviceService } from './reposervice.service';
 
 
 @Injectable({
@@ -10,23 +11,19 @@ import { HttpClient} from '@angular/common/http';
 })
 export class UserServiceService {
   gotUser!: User;
-  allRepositories!: Repositories;
   private myname!:string;
-  private reponame!:string;
   private clientID!: 'Iv1.adffa77413217ae0';
   private clientSecret!:'627704f11b12ca5a8b8a6579747f5fd57bf1c6c5';
 
   constructor(private http: HttpClient) {
     this.gotUser = new User("","","","",0,0,0,"",new Date);
-    this.allRepositories = new Repositories("","",0,0,"","",new Date,);
     this.myname = 'CynthiaOuma12673'
-    this.reponame = '/repos'
+
     
   }
 
   searchUSer() {
     interface Responce {
-      // url:string,
       login: string;
       html_url:string;
       location:string
@@ -59,26 +56,5 @@ export class UserServiceService {
     });
     return Promise
   }
-  // searchRepositories(searchUsername:any){
-  //   interface Repos{
-  //     name:string;
-  //     html_url:string;
-  //     description:string;
-  //     fork:number;
-  //     watching:number;
-  //     languages:string;
-  //     dateCreated:Date;
-  //   }
-  //   return new Promise((resolve,reject)=>{
-  //     this.http.get<Repos>('https://api.github.com/users/'+searchUsername+"/repos?order=created&sort=asc?access_token="+environment.apiKey).toPromise().then(
-  //       (results) => {
-  //         this.allRepositories = results;
-  //         resolve(null);
-  //       },
-  //       (error) => {
-  //         reject();
-  //       }
-  //     );
-  //   });
-  // }
-}
+  
+        }

@@ -1,5 +1,6 @@
 export class Repositories {
-    constructor(public name:string, public html_url:string, public fork:number, public watching:number, public languanges:string, description:string, public created_at:Date){
+    static result:any
+    constructor(public name:string, public html_url:string, public fork:number, public watching:number, public languages:string,public description:string, public created_at:Date){
 
     }
 }

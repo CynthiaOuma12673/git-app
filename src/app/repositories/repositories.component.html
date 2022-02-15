@@ -1,33 +1,31 @@
-<!-- <div class="container-fluid">
-    <!-- <app-search-form (searchResult)= "repositoriesSearch($event)"></app-search-form> -->
-        <!-- <div class="container">
-        <div class="container allrepositories">
-              <div class="card" *ngFor="let repository of repositories">
-                <div class="card-body">
-                    <h5 class="card-title">Repository Name: &nbsp;{{repository.name}} </h5>
-            <div class="card-text">
-                    <hr>
-            <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}} 
-                    </div>
-                    <hr>
-            <div class="card-subtitle">
-                        <span class="top">Language: </span> {{repository.languages}}
-            </div>
-            <div class="card-subtitle"><span>Created On:</span>{{repository.dateCreated | date}}</div>
-            </div>
-            </div>
-            <div class="card-footer">
-            <div class="btn-group" role="group" aria-label="Third group">
-                    <button class="btn btn-sm btn-info"><i class="fa fa-eye"></i> {{repository.watching}}</button>
-            </div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                    <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork"></i> {{repository.fork}}</button>
-            </div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                    <button class="btn btn-sm btn-success" id="view"><a href="{{repository.html_url}}" class="card-link">View <i class="fa fa-arrow-circle-right"></i></a> </button> 
-            </div>
-            </div>
-            </div>
-            </div>
-    </div>
-</div>  -->
+<div class="container">
+    <div class="container ">
+          <div class="card" *ngFor="let repository of repos">
+            <div class="card-body">
+                <h5 class="card-title">Repository Name:{{repositries.name}} </h5>
+        <div class="card-text">
+                <hr>
+        <div class="desc"><span class="top">Description:</span>{{repositries.description}} 
+                </div>
+                <hr>
+        <div class="card-subtitle">
+                    <span class="top">Language: </span> {{repositries.languages}}
+        </div>
+        <div class="card-subtitle"><span>Created On:</span>{{repositries.created_at}}</div>
+        </div>
+        </div>
+        <div class="card-footer">
+        <div class="btn-group" role="group" aria-label="Third group">
+                <button class="btn btn-sm btn-info"><i class="fa fa-eye"></i> {{repositries.watching}}</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+                <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork"></i> {{ repositries.fork}}</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+                <button class="btn btn-sm btn-success" id="view"><a href="{{repositories.html_url}}" class="card-link">View <i class="fa fa-arrow-circle-right"></i></a> </button> 
+        </div>
+        </div>
+        </div>
+        </div>
+</div>
+

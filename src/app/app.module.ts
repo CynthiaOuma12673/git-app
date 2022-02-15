@@ -3,27 +3,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ReposerviceService } from './reposervice.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { RepositoriesComponent } from './repositories/repositories.component';
 import { UserComponent } from './user/user.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NotFoundComponent,
-    RepositoriesComponent,
     UserComponent,
     SearchFormComponent,
     DateCountPipe,
-    HighlightDirective
+    HighlightDirective,
+    RepositoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,7 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserServiceService],
+  providers: [UserServiceService, ReposerviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
