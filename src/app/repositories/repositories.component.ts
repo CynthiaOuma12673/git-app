@@ -53,7 +53,6 @@ export class RepositoriesComponent implements OnInit {
     this.allRepos=this.repoService.allRepos
 
     this.http.get<Repositories>(environment.apiUrl + this.myname + this.reponame + "?clientID="+ this.clientID + "&clientSecret="+this.clientSecret).subscribe(data=>{
-      // Succesful API request
       this.allRepos= new Repositories("","",0,0,"","",new Date,);
 
       }
